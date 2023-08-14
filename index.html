@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Import des icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>YouTube-style Sidebar</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="logo">Logo YouTube</div>
-            <a href="#home">Accueil</a>
-            <a href="#trending">Tendances</a>
-            <a href="#subscriptions">Abonnements</a>
-            <a href="#library">Bibliothèque</a>
-            <a href="#history">Historique</a>
-        </div>
-        <div class="content">
-            <h1>Contenu Principal</h1>
-            <p>Contenu de la page...</p>
+    <!-- The sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <h1 class="logo"><span class="color-stream">STREAM</span><span class="color-good">GOOD</span></h1>
+            <div class="group-title-one">
+                <h2 class="sidebar-title">Menu</h2>
+                <a class="active" href="#home"><span class="material-icons">
+                        home
+                    </span>Accueil</a>
+                <a href="#"><span class="material-icons">
+                        sports_esports
+                    </span>Jeux</a>
+                <a href="#"><span class="material-icons">
+                        sports_esports
+                    </span>E-sports</a>
+            </div>
+
+            <div class="group-title-two">
+                <h2 class="sidebar-title">Librairies</h2>
+                <a href="#"><span class="material-icons">
+                        subdirectory_arrow_left
+                    </span>Récents</a>
+                <a href="#"><span class="material-icons">
+                        favorite_border
+                    </span>Favoris</a>
+                <a href="#"><span class="material-icons">
+                        library_add
+                    </span>Plus tard</a>
+            </div>
+            <div class="group-title-three">
+                <h2 class="sidebar-title">Général</h2>
+                <a class="" href="#"><span class="material-icons">
+                        settings
+                    </span>Paramètre</a>
+                <a href="#"><span class="material-icons">
+                        logout
+                    </span>Déconnexion</a>
+            </div>
+
         </div>
     </div>
+
+    <!-- Page content -->
+    <div class="container">
+        <input class="content1-search" type="search" placeholder="  Rechercher">
+        <div class="content1">
+            <h2 class="content1-title">Actualités</h2>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="example.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la vidéo.
+            </video>
+        </div>
+    </div>
+
 </body>
+
 </html>
