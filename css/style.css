@@ -103,12 +103,52 @@ body {
 }
 
 .content1-title {
+  color: var(--couleur-texte1);
+  margin-right: 50rem;
+  margin-bottom: 1rem;
   margin-top: 2rem;
-  margin-right: 70rem;
+}
+
+.video-big{
+  width: 700;
+  height: 500px;
+  border-radius: 10px;
+  border: solid 2px #00b9ae;
+}
+
+.container-two{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
   color: var(--couleur-texte1);
 }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
+.carousel{
+  width: 1500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-left: 20rem;
+  padding: 0;
+}
+
+.content-one, .content-two, .content-three, .content-four{
+  width: 300px;
+  height: 300px;
+  border: #00b9ae solid 2px;
+  margin: 2rem;
+  border-radius: 10px;
+}
+
+
+
+
+/* Respnsivité */
 @media screen and (max-width: 1440px) {
   .content1-search {
     width: 200px;
@@ -116,9 +156,18 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+
+
+  .video-big{
+    width: 600px;
+    height: 400px;
+    margin-left: 12rem;
+    margin-top: 6rem;
+  }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -138,10 +187,26 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  .content1-title {
+    margin-right: 25rem;
+    margin-top: 2rem;
+  }
+
+  .video-big{
+    width: 600px;
+    height: 400px;
+    margin-left: 0;
+    margin-top: O;
+  }
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
+
+  *{
+    font-size: 10px;
+  }
   .sidebar a {
     font-size: 10px;
   }
@@ -152,8 +217,16 @@ body {
 
   .content1-title {
     color: var(--couleur-texte1);
-    z-index: 999;
-    margin-top: 50rem;
-    border: #00b9ae solid 1px;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 13px;
+  }
+
+  .video big{
+    width: 300px;
+    height: 100px;
+    margin-left: 0;
+    margin-top: 0;
   }
 }
