@@ -87,6 +87,7 @@ body {
   background-color: #21242d;
   border: solid 2px #00b9ae;
   border-radius: 5px;
+  color: var(--couleur-texte1);
 }
 
 .content1-search:focus {
@@ -100,13 +101,43 @@ body {
   margin-top: 2rem;
 }
 
-.cover-img{
-  width: 700px;
-  height: 500px;
-  background-image: url(../img/coup-moyen-personnes-jouant-jeux-video.jpg);
-  background-size: cover;
-  border: #00b9ae solid 2px;
+.description-big-video{
+  display: flex;
+  color: var(--couleur-texte1);
+  width: 50%;
 }
+
+.description-big-video p{
+  padding: 20px;
+}
+
+input, #show-more{
+  display: none;
+}
+
+#more-content {
+  display: none;
+}
+
+#show-more:checked ~ #more-content {
+  display: flex;
+}
+
+.justifie{
+  text-align: justify;
+}
+
+label {
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--couleur-texte2);
+}
+
+label:focus{
+  color: red;
+  display: none;
+}
+
 
 .video-big {
   width: 700px;
