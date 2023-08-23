@@ -1,138 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Import des icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/accueil.css" />
     <title>STREAMGOOD</title>
 </head>
-
 <body>
-    <!-- The sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-logo">
-            <h1 class="logo"><span class="color-stream">STREAM</span><span class="color-good">GOOD</span></h1>
-            <div class="group-title-one">
-                <h2 class="sidebar-title">Menu</h2>
-                <a class="active" href="#home"><span class="material-icons">
-                    sports_esports
-                    </span>Accueil</a>
-                <a href="#"><span class="material-icons">
-                        sports_esports
-                    </span>Jeux</a>
-                <a href="#"><span class="material-icons">
-                        sports_esports
-                    </span>E-sports</a>
-            </div>
-
-            <div class="group-title-two">
-                <h2 class="sidebar-title">Librairies</h2>
-                <a href="#"><span class="material-icons">
-                        subdirectory_arrow_left
-                    </span>Récents</a>
-                <a href="#"><span class="material-icons">
-                        favorite_border
-                    </span>Favoris</a>
-                <a href="#"><span class="material-icons">
-                        library_add
-                    </span>Plus tard</a>
-            </div>
-            <div class="group-title-three">
-                <h2 class="sidebar-title">Général</h2>
-                <a class="" href="#"><span class="material-icons">
-                        settings
-                    </span>Paramètre</a>
-                <a href="./html/accueil.html"><span class="material-icons">
-                        logout
-                   </span>Déconnexion</a>
-            </div>
-            
+    <video autoplay muted loop id="background-video">
+        <source src="../img/arriere1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <div class="page-title">
+            <h1>
+                <span class="color-stream">STREAM</span><span class="color-good">GOOD</span>
+            </h1>
         </div>
-    </div>
-
-    <!-- Page content -->
-    <div class="container">
-        <input class="content1-search" type="search" placeholder="  Rechercher">
-        <div class="content1">
-            <h2 class="content1-title">Actualités</h2>
-        </div>
-        <div class="description-big-video">
-            <video class="video-big" controls poster="./img/jeshoots-com-eCktzGjC-iU-unsplash.jpg">
-                <source src="./img/This is esports!.mp4" type="video/mp4" style="border: red 1px solid ;">
-                Votre navigateur ne prend pas en charge la vidéo.
-            </video>
-            <input type="checkbox" id="show-more">
-            <p class="justifie">
-                "Découvrez l'action en direct ! Rejoignez notre chaîne de streaming de jeux pour une immersion totale
-                dans le monde du gaming.
-                Abonnez-vous dès aujourd'hui pour
-                ne manquer aucune minute de l'action virtuelle !..."<br><label for="show-more">Lire plus</label>
-                <p id="more-content">
-                    "Découvrez encore plus de contenu captivant et d'aventures épiques en rejoignant notre chaîne de
-                    streaming de jeux. Abonnez-vous dès maintenant pour vivre l'excitation du gaming en temps réel !"
-                </p>
+        <div class="page-description">
+            <p>
+                Plongez au cœur de l'action virtuelle .<br>
+                Découvrez un univers infini de divertissement .<br>
+                De gaming sur notre plateforme de streaming dernier cri.
+                <a href="./login.html" class="boutton"><button class="button"> Commencer
+                </button></a>
             </p>
         </div>
     </div>
-    <div class="container-two">
-        <div class="content2">
-            <h2 class="content2-title">Le plus regardé</h2>
-        </div>
-    </div>
-    <div class="carousel">
-        <div class="video-item">
-            <video class="content-one" controls poster="./img/aleks-dorohovich--EElZSFXALI-unsplash.jpg">
-                <source src="./img/This is esports!.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la vidéo.
-            </video>
-            <p class="description">Rentrez dans le vive de la compétition <br> Avec les meilleurs joueurs E-sport.</p>
-        </div>
-        <div class="video-item">
-            <video class="content-two" controls>
-                <source src="./img/3 ÉTOILES sur le NOUVEAU Défi du CLASHIVERSAIRE 3 ! Clash of Clans.mp4"
-                    type="video/mp4">
-                Votre navigateur ne prend pas en charge la vidéo.
-            </video>
-            <p class="description">Découvrez les nouveauté de clash of clan <br> et toutes les nouvelles possibilitées
-                d'amélioration.</p>
-        </div>
-        <div class="video-item">
-            <video class="content-three" controls poster="./img/clash.jpeg">
-                <source src="./img/CLASH ROYALE_ EPIC COMEBACK!.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la vidéo.
-            </video>
-            <p class="description">Apprenez à attaquer les camps adverses &#128520; <br> mais n'oubliez de défendre
-                votre camps &#128512; </p>
-        </div>
-        <!-- <div class="video-item">
-            <video class="content-four" controls poster="./img/codm.jpeg">
-                <source src="./img/The Strongest Sniper in Call of Duty_ Mobile.mp4" type="video/mp4">
-            </video>
-            <p class="description">Obtenez le niveau légendaire grace à ce tuto <br> maîtrisez le sniper </p>
-        </div> -->
-
-        <!-- Second -->
-        <!-- <div class="video-item">
-            <video class="content-one" controls poster="./img/onur-binay-J7Spe1GTCUw-unsplash.jpg">
-                <source src="./img/This is esports!.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la vidéo.
-            </video>
-            <p class="description">Rentrez dans le vive de la compétition <br> Avec les meilleurs joueurs E-sport.</p>
-        </div>
-
-        <div class="video-item">
-            <video class="content-one" controls poster="./img/uriel-soberanes-MxVkWPiJALs-unsplash.jpg">
-                <source src="./img/This is esports!.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la vidéo.
-            </video>
-            <p class="description">Rentrez dans le vive de la compétition <br> Avec les meilleurs joueurs E-sport.</p>
-        </div> -->
-    </div>
-
 </body>
-
 </html>
