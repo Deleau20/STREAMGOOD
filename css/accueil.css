@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Victor+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300;400&family=Victor+Mono:ital,wght@0,400;0,700;1,700&display=swap');
 
 :root {
   --couleur-principale: #16181e;
@@ -10,18 +10,9 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Victor Mono", monospace;
+  font-family: 'Handjet', cursive;  
   text-decoration: none;
   list-style: none;
-}
-
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-  color: white;
 }
 
 #background-video {
@@ -34,174 +25,198 @@ html {
   z-index: -1;
 }
 
-.content {
-  position: relative;
-  padding: 50px;
+.title {
+  text-align: start;
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+  margin-left: 1.5rem;
 }
 
-.page-title {
-  margin-top: 20rem;
-  display: flex;
+#title-font{
+  font-size: 20rem;
 }
 
 .color-stream {
   text-decoration: none;
-  font-size: 12rem;
+  font-size: 2rem;
+  font-weight: bolder;
   color: var(--couleur-texte2);
 }
 
 .color-good {
-  font-size: 12rem;
+  font-size: 2rem;
+  font-weight: bolder;
   color: var(--couleur-texte1);
 }
 
-.button {
-  --color: #00b9ae;
-  padding: 0.8em 1.7em;
+.item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20rem;
+}
+
+.item-1 {
+  font-size: 4rem;
+  color: var(--couleur-texte1);
+  margin-left: 2rem;
+}
+
+
+
+.btn {
+  --color: #00A97F;
+  --color2: rgb(10, 25, 30);
+  padding: 0.8em 1.75em;
   background-color: transparent;
-  border-radius: 0.3em;
-  margin-left: 20rem;
+  border-radius: 6px;
+  border: .3px solid var(--color);
+  transition: .5s;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: 0.5s;
-  font-weight: 400;
-  font-size: 17px;
-  border: 1px solid;
-  font-family: inherit;
+  z-index: 1;
+  font-weight: bolder;
+  font-size: 20px;
   text-transform: uppercase;
   color: var(--color);
-  font-weight: 400;
-  z-index: 1;
-}
-
-.button::before,
-.button::after {
-  content: "";
+ }
+ 
+ .btn::after, .btn::before {
+  content: '';
   display: block;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
   position: absolute;
-  border-radius: 50%;
+  inset: 50%;
+  left: 25%;
   z-index: -1;
+  transition: .5s ease-out;
   background-color: var(--color);
-  transition: 1s ease;
-}
-
-.button::before {
-  top: -1em;
-  left: -1em;
-}
-
-.button::after {
-  left: calc(100% + 1em);
-  top: calc(100% + 1em);
-}
-
-.button:hover::before,
-.button:hover::after {
-  height: 410px;
-  width: 410px;
-}
-
-.button:hover {
-  color: rgb(10, 25, 30);
-}
-
-.button:active {
-  filter: brightness(0.8);
-}
-
-.page-description {
-  justify-self: center;
-  margin-top: 2rem;
-  font-size: 2rem;
+ }
+ 
+ .btn::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+ }
+ 
+ .btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+ }
+ 
+ .btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+ }
+ 
+ .btn:hover {
   color: var(--couleur-texte1);
-  margin-left: 1rem;
-}
+ }
+ 
+ .btn:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+ }
 
-/* Responsivité */
-@media screen and (max-width: 1440px) {
-  .page-title {
-    margin-top: 15rem;
-    font-size: 10rem;
-  }
-  .page-description {
-    font-size: 1.5rem;
-  }
-  .button {
-    margin-left: 10rem;
-  }
-}
+ /* Styles généraux */
 
-@media screen and (max-width: 1024px) {
-  .page-title {
-    margin-top: 10rem;
-    font-size: 8rem;
-  }
-  .page-description {
-    font-size: 1.2rem;
-  }
-  .button {
-    margin-left: 5rem;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .page-title {
-    margin-top: 8rem;
-    font-size: 6rem;
-  }
-  .page-description {
-    font-size: 3rem;
-    margin-left: 0.5rem;
-  }
-  .button {
-    margin-left: 2rem;
-  }
-}
+@media (min-width: 320px) and (max-width: 480px) {
 
-@media screen and (max-width: 425px) {
-  .page-title {
-    margin-top: 5rem;
-    font-size: 4rem;
-    margin-bottom: 5rem;
+  .title {
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    margin-left: 0rem;
   }
-  .page-description {
-    font-size: 2rem;
-    margin-left: 0.5rem;
+  
+  #title-font{
+    font-size: 4.5rem;
   }
-  .button {
-    margin-left: 2rem;
-  }
-}
 
-@media screen and (max-width: 320px) {
-  .page-title {
-    margin-top: 3rem;
-    font-size: 15px;
-  }
-  .page-description {
-    font-size: 0.6rem;
-    margin-left: 0.2rem;
+  .item-container {
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
     text-align: center;
   }
-
-  .color-stream {
-    text-decoration: none;
-    font-size: 2rem;
-    color: var(--couleur-texte2);
-  }
-
-  .color-good {
-    font-size: 2rem;
+  
+  .item-1 {
+    font-size: 1rem;
     color: var(--couleur-texte1);
+    justify-content: center;
+    margin: left;
   }
 
-  .button {
-    margin-top: 2rem;
-    margin-left: 0.5rem;
-    font-size: 12px;
+  .btn {
+    font-size: 10px;
+    margin-left: 1rem;
+   }
+}
+
+@media (min-width: 481px) and (max-width: 760px) {
+  .btn {
+    font-size: 15px;
+    margin-left: 4rem;
+   }
+
+   .item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #title-font{
+    font-size: 18rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #title-font{
+    font-size: 18rem;
+  }
+
+  .btn {
+    font-size: 20px;
+    margin-left: 2rem;
+   }
+
+   .title {
+    text-align: start;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    margin-left: 1.5rem;
+  }
+
+  .item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .btn {
+    font-size: 20px;
+    margin-left: 2rem;
+   }
+
+   .item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
   }
 }
