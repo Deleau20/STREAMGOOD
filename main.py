@@ -94,28 +94,71 @@
 
 
 
-def inscription():
-    nom = input("Quel est votre nom : ")
-    prenom = input("Quel est votre prénom : ")
-    age = input("Quel est votre age : ")
-    email = input("Quel est votre email : ")
-    mot_de_passe = input("Quel est votre mot de passe : ")
-    informations = [nom, prenom, age, email, mot_de_passe]
-    return informations
+# def inscription():
+#     nom = input("Quel est votre nom : ")
+#     prenom = input("Quel est votre prénom : ")
+#     age = input("Quel est votre age : ")
+#     email = input("Quel est votre email : ")
+#     mot_de_passe = input("Quel est votre mot de passe : ")
+#     informations = [nom, prenom, age, email, mot_de_passe]
+#     return informations
 
-def enregistrement(dico={}):
-    nom, prenom, age, email, mot_de_passe = inscription()
-    dico = {"nom": nom, "prenom": prenom, "age": age, "email": email, "mot_de_passe": mot_de_passe}
-    return dico
+# def enregistrement(dico={}):
+#     nom, prenom, age, email, mot_de_passe = inscription()
+#     dico = {"nom": nom, "prenom": prenom, "age": age, "email": email, "mot_de_passe": mot_de_passe}
+#     return dico
 
-print(enregistrement())
+# print(enregistrement())
 
-def connexion(dico):
-    email = input("Quel est votre email : ")
-    mot_de_passe = input("Quel est votre mot de passe : ")
-    if email in dico.values() and mot_de_passe in dico.values():
-        return f"Bonjour vous êtes bien inscrit"
-    else:
-        return "Ces infos n'existent pas !"
+# def connexion(dico):
+#     email = input("Quel est votre email : ")
+#     mot_de_passe = input("Quel est votre mot de passe : ")
+#     if email in dico.values() and mot_de_passe in dico.values():
+#         return f"Bonjour vous êtes bien inscrit"
+#     else:
+#         return "Ces infos n'existent pas !"
     
-print(connexion(enregistrement()))
+# print(connexion(enregistrement()))
+
+# fonction qui retourne la somme des 1000 entiers
+def somme():
+    sim = 0
+    num = 0
+    i = 0
+    while i < 1000:
+        sim += num
+        num += 1
+        i += 1
+    return sim
+
+print(somme())
+
+# Avec les suites
+def somme2():
+    n = 1000
+    n //=2
+    a = 1
+    b = 1001
+    c = a+b
+    g = n*c
+    return g  
+
+print(somme2())
+
+# Programmes qui dit si un nomme est premier ou pas
+def premier(nombre):
+    for i in range(2, nombre):
+        if nombre % i == 0:
+            return False
+    return True
+
+print(premier(6))
+
+
+def delegue(fonction, liste):
+    resultat = []
+    for i in liste:
+        resultat.append(fonction(i))
+    return resultat
+
+print(delegue(lambda x: x**2, [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]))
