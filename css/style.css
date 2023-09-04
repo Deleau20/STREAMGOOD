@@ -305,6 +305,11 @@ display: none;
     border-radius: 5px;
     background-color: #808080f6;
     z-index: 3;
+    opacity: 1;
+  }
+
+  .video-big poster{
+    z-index: -1;
   }
 
   .clic-3 a, span{
